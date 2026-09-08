@@ -10,7 +10,8 @@
         "position": "bottom-left",
         "veil": 100,
         "show_scroll": true,
-        "cta_link": "/collections/all"
+        "cta_link": "/collections/all",
+        "image_desktop": "shopify://shop_images/gold-mines-hero.png"
       }
     },
     "signature": {
@@ -22,7 +23,8 @@
         "text": "Le solitaire Vertige, serti à la main dans nos ateliers, en une seule journée de travail.",
         "cta_label": "Découvrir",
         "parallax": true,
-        "cta_link": "/collections/all"
+        "cta_link": "/collections/all",
+        "image": "shopify://shop_images/gold-mines-bague-fiancailles.png"
       }
     },
     "universes": {
@@ -38,35 +40,40 @@
           "type": "univers",
           "settings": {
             "title": "Bagues",
-            "link": "/collections/bague"
+            "link": "/collections/bague",
+            "image": "shopify://shop_images/gold-mines-bague-fiancailles.png"
           }
         },
         "u2": {
           "type": "univers",
           "settings": {
             "title": "Bracelets",
-            "link": "/collections/bracelets"
+            "link": "/collections/bracelets",
+            "image": "shopify://shop_images/gold-mines-alliance.png"
           }
         },
         "u3": {
           "type": "univers",
           "settings": {
             "title": "Colliers",
-            "link": "/collections/chaines-colliers"
+            "link": "/collections/chaines-colliers",
+            "image": "shopify://shop_images/gold-mines-hero.png"
           }
         },
         "u4": {
           "type": "univers",
           "settings": {
             "title": "Boucles d'oreilles",
-            "link": "/collections/boucles-d-oreilles"
+            "link": "/collections/boucles-d-oreilles",
+            "image": "shopify://shop_images/gold-mines-offrir.png"
           }
         },
         "u5": {
           "type": "univers",
           "settings": {
             "title": "Mariage",
-            "link": "/pages/mariage"
+            "link": "/pages/mariage",
+            "image": "shopify://shop_images/gold-mines-alliance.png"
           }
         }
       },
@@ -95,7 +102,8 @@
         "label_2": "Alliances",
         "parallax": true,
         "link_1": "/collections/bagues-de-fiancailles",
-        "link_2": "/collections/alliances"
+        "link_2": "/collections/alliances",
+        "image": "shopify://shop_images/gold-mines-bague-fiancailles.png"
       }
     },
     "craft": {
@@ -103,7 +111,8 @@
       "settings": {
         "eyebrow": "Le geste",
         "title": "L'art du détail",
-        "cta_link": "/pages/savoir-faire"
+        "cta_link": "/pages/savoir-faire",
+        "image": "shopify://shop_images/gold-mines-atelier.png"
       },
       "blocks": {
         "s1": {
@@ -156,7 +165,8 @@
             "note": "D à F",
             "text": "Nous ne retenons que les pierres dont la taille laisse passer la lumière sans la retenir.",
             "link": "/pages/diamants",
-            "link_label": "Découvrir"
+            "link_label": "Découvrir",
+            "image": "shopify://shop_images/gold-mines-bague-fiancailles.png"
           }
         },
         "p2": {
@@ -166,7 +176,8 @@
             "note": "Colombie",
             "text": "Un vert profond, jamais retouché, accepté avec ses jardins.",
             "link": "/pages/pierres-exceptionnelles",
-            "link_label": "Découvrir"
+            "link_label": "Découvrir",
+            "image": "shopify://shop_images/gold-mines-alliance.png"
           }
         },
         "p3": {
@@ -176,7 +187,8 @@
             "note": "Ceylan",
             "text": "Le bleu velours des pierres de Ceylan, choisi pierre à pierre.",
             "link": "/pages/pierres-exceptionnelles",
-            "link_label": "Découvrir"
+            "link_label": "Découvrir",
+            "image": "shopify://shop_images/gold-mines-hero.png"
           }
         },
         "p4": {
@@ -186,7 +198,8 @@
             "note": "Birmanie",
             "text": "Le rouge sang de pigeon, la teinte la plus rare et la plus recherchée.",
             "link": "/pages/pierres-exceptionnelles",
-            "link_label": "Découvrir"
+            "link_label": "Découvrir",
+            "image": "shopify://shop_images/gold-mines-atelier.png"
           }
         }
       },
@@ -205,7 +218,8 @@
         "text": "Un atelier, une poignée d'artisans, et l'obstination de ne rien livrer qui ne soit juste.",
         "cta_label": "Découvrir notre histoire",
         "media_position": "right",
-        "cta_link": "/pages/notre-histoire"
+        "cta_link": "/pages/notre-histoire",
+        "image": "shopify://shop_images/gold-mines-atelier.png"
       }
     },
     "services": {
@@ -276,7 +290,8 @@
         "text": "Choisissez le modèle, le métal, le pavage, la forme puis la pierre.",
         "cta_label": "Créer votre bague",
         "cta_link": "/pages/creer-votre-bague",
-        "parallax": true
+        "parallax": true,
+        "image": "shopify://shop_images/gold-mines-offrir.png"
       }
     }
   },
