@@ -6,7 +6,7 @@
       "type": "header",
       "settings": {
         "logo_text": "GOLD MINES",
-        "menu": "main-menu",
+        "menu": "gold-mines-navigation",
         "appointment_label": "Prendre rendez-vous",
         "show_localization": true,
         "transparent_templates": "index",
@@ -21,6 +21,7 @@
           "settings": {
             "parent_handle": "bagues-de-fiancailles",
             "title_1": "Découvrir",
+            "menu_1": "gm-bagues-decouvrir",
             "title_2": "Par style",
             "title_3": "Par métal",
             "title_4": "Par pierre",
@@ -37,6 +38,7 @@
           "settings": {
             "parent_handle": "alliances",
             "title_1": "Découvrir",
+            "menu_1": "gm-alliances-decouvrir",
             "title_2": "Par style",
             "title_3": "Par métal",
             "media_title": "Les Alliances",
@@ -49,7 +51,8 @@
           "type": "mega",
           "settings": {
             "parent_handle": "joaillerie",
-            "title_1": "Bagues",
+            "title_1": "Catégories",
+            "menu_1": "gm-joaillerie-categories",
             "title_2": "Colliers & pendentifs",
             "title_3": "Boucles d'oreilles",
             "title_4": "Bracelets",
@@ -68,7 +71,8 @@
           "type": "mega",
           "settings": {
             "parent_handle": "offrir",
-            "title_1": "Les destinataires",
+            "title_1": "Idées cadeaux",
+            "menu_1": "gm-offrir-idees",
             "title_2": "Les occasions",
             "title_3": "Nos sélections par prix",
             "title_4": "Découvrir",
@@ -83,6 +87,7 @@
           "settings": {
             "parent_handle": "guides",
             "title_1": "Nos conseils",
+            "menu_1": "gm-guides-conseils",
             "title_2": "Services",
             "media_title": "Savoir-faire",
             "media_cta": "Découvrir",
