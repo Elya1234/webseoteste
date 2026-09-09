@@ -65,6 +65,34 @@
     });
   });
 
+  /* ---------- 3bis. Collections signature — fondu croisé au survol ------- */
+  document.querySelectorAll('[data-collections-signature]').forEach(function (root) {
+    var items = root.querySelectorAll('[data-csig-item]');
+    var images = root.querySelectorAll('[data-csig-image]');
+
+    function select(key) {
+      items.forEach(function (i) { i.classList.toggle('is-active', i.dataset.csigItem === key); });
+      images.forEach(function (i) { i.classList.toggle('is-active', i.dataset.csigImage === key); });
+    }
+
+    items.forEach(function (item) {
+      item.addEventListener('mouseenter', function () {
+        if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) select(item.dataset.csigItem);
+      });
+      item.addEventListener('focus', function () { select(item.dataset.csigItem); });
+    });
+
+    /* Mobile (pas de survol) : l'élément le plus proche du centre devient actif. */
+    if ('IntersectionObserver' in window && !window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+      var centerObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && entry.intersectionRatio > 0.6) select(entry.target.dataset.csigItem);
+        });
+      }, { threshold: [0.6], rootMargin: '-40% 0px -40% 0px' });
+      items.forEach(function (item) { centerObserver.observe(item); });
+    }
+  });
+
   /* ---------- 4. Favoris ---------------------------------------------------
      Enregistrement local, côté navigateur. À relier à un vrai service
      client lors de l'étape Compte. Aucun bouton sans effet visible.

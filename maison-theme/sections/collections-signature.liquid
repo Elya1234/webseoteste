@@ -1,0 +1,68 @@
+{%- comment -%}
+  MAISON — Collections signature
+  Liste verticale de noms de collections en grand serif ; au survol (ou au
+  focus clavier) desktop, le nom passe en blanc plein et l'image associée
+  apparaît en fondu derrière. Sur mobile (pas de survol), l'élément le plus
+  proche du centre de l'écran devient actif via IntersectionObserver.
+  Chaque nom est un vrai lien vers sa collection — jamais une ancre morte.
+{%- endcomment -%}
+{%- assign visible_blocks = section.blocks | where: 'settings.link', blank | size -%}
+{%- if section.blocks.size > 0 -%}
+  <section class="csig" data-collections-signature>
+    <div class="csig__bg" aria-hidden="true">
+      {%- for block in section.blocks -%}
+        <div class="csig__bg-img{% if forloop.first %} is-active{% endif %}" data-csig-image="{{ block.id }}">
+          {%- if block.settings.image != blank -%}
+            {{ block.settings.image | image_url: width: 1400 | image_tag: loading: 'lazy', sizes: '100vw', widths: '700,1000,1400', alt: '' }}
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+      <div class="csig__veil" aria-hidden="true"></div>
+    </div>
+
+    <div class="page csig__inner">
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="t-label eyebrow csig__eyebrow" data-reveal>{{ section.settings.eyebrow }}</p>
+      {%- endif -%}
+
+      <nav class="csig__list" aria-label="{{ section.settings.eyebrow | default: 'Nos collections' | escape }}">
+        {%- for block in section.blocks -%}
+          {%- if block.settings.link != blank -%}
+            <a
+              class="csig__name{% if forloop.first %} is-active{% endif %}"
+              href="{{ block.settings.link }}"
+              data-csig-item="{{ block.id }}"
+              {{ block.shopify_attributes }}
+              data-reveal
+              style="--i: {{ forloop.index0 }}"
+            >
+              {{ block.settings.title }}
+            </a>
+          {%- endif -%}
+        {%- endfor -%}
+      </nav>
+    </div>
+  </section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Collections signature",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Surtitre", "default": "Nos collections" }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Nom affiché", "default": "Collection" },
+        { "type": "url", "id": "link", "label": "Lien", "info": "Vers une vraie collection ou page. Le nom n'apparaît dans la liste que si ce champ est rempli." },
+        { "type": "image_picker", "id": "image", "label": "Image de fond au survol" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Collections signature" }]
+}
+{% endschema %}

@@ -1,0 +1,67 @@
+{%- comment -%}
+  MAISON — Trois valeurs
+  Icônes filaires + titre, chaque bloc mène vers une vraie page ou une
+  ancre réelle. Rien ne s'affiche sans lien : pas de bloc cliquable mort.
+{%- endcomment -%}
+{%- if section.blocks.size > 0 -%}
+  <section class="section values">
+    <div class="page">
+      {%- if section.settings.title != blank -%}
+        <h2 class="t-h1 line-mask values__title" data-reveal="mask"><span>{{ section.settings.title }}</span></h2>
+      {%- endif -%}
+
+      <div class="values__grid">
+        {%- for block in section.blocks -%}
+          {%- if block.settings.link != blank -%}
+            <a class="values__item" href="{{ block.settings.link }}" {{ block.shopify_attributes }} data-reveal style="--i: {{ forloop.index0 }}">
+              {% render 'maison-icon', icon: block.settings.icon %}
+              <p class="t-h3 values__name">{{ block.settings.title }}</p>
+            </a>
+          {%- else -%}
+            <div class="values__item" {{ block.shopify_attributes }} data-reveal style="--i: {{ forloop.index0 }}">
+              {% render 'maison-icon', icon: block.settings.icon %}
+              <p class="t-h3 values__name">{{ block.settings.title }}</p>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Trois valeurs",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Titre" }
+  ],
+  "blocks": [
+    {
+      "type": "value",
+      "name": "Valeur",
+      "settings": [
+        { "type": "select", "id": "icon", "label": "Icône", "default": "craft",
+          "options": [
+            { "value": "craft", "label": "Artisanat" },
+            { "value": "leaf", "label": "Éthique" },
+            { "value": "diamond", "label": "Diamant" }
+          ]
+        },
+        { "type": "text", "id": "title", "label": "Titre", "default": "Excellence artisanale" },
+        { "type": "url", "id": "link", "label": "Lien" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Trois valeurs",
+      "blocks": [
+        { "type": "value", "settings": { "icon": "craft", "title": "Excellence artisanale" } },
+        { "type": "value", "settings": { "icon": "leaf", "title": "Approche éthique" } },
+        { "type": "value", "settings": { "icon": "diamond", "title": "Diamants naturels et de synthèse" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

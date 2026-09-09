@@ -259,6 +259,7 @@ h1, h2, h3, h4, p { margin: 0; }
   vector-effect: non-scaling-stroke;
 }
 .icon--s { width: 15px; height: 15px; }
+.icon--value { width: 44px; height: 44px; }
 
 /* ---------- 7. ACCESSIBILITÉ -------------------------------------------- */
 .visually-hidden {

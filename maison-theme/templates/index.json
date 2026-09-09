@@ -85,6 +85,16 @@
         "u5"
       ]
     },
+    "values": {
+      "type": "values",
+      "settings": { "title": "" },
+      "blocks": {
+        "v1": { "type": "value", "settings": { "icon": "craft", "title": "Excellence artisanale", "link": "/pages/savoir-faire" } },
+        "v2": { "type": "value", "settings": { "icon": "leaf", "title": "Approche éthique", "link": "/pages/notre-histoire" } },
+        "v3": { "type": "value", "settings": { "icon": "diamond", "title": "Diamants naturels et de synthèse", "link": "/pages/diamants" } }
+      },
+      "block_order": ["v1", "v2", "v3"]
+    },
     "selection": {
       "type": "selection",
       "settings": {
@@ -222,6 +232,30 @@
         "image": "shopify://shop_images/gold-mines-atelier.png"
       }
     },
+    "collections_signature": {
+      "type": "collections-signature",
+      "settings": { "eyebrow": "Nos collections" },
+      "blocks": {
+        "c1": { "type": "collection", "settings": { "title": "Bagues de fiançailles", "link": "/collections/bagues-de-fiancailles", "image": "shopify://shop_images/gold-mines-bague-fiancailles.png" } },
+        "c2": { "type": "collection", "settings": { "title": "Alliances", "link": "/collections/alliances", "image": "shopify://shop_images/gold-mines-alliance.png" } },
+        "c3": { "type": "collection", "settings": { "title": "Bagues cocktail", "link": "/collections/bagues-cocktail", "image": "shopify://shop_images/gold-mines-hero.png" } },
+        "c4": { "type": "collection", "settings": { "title": "Pendentifs & Médaillons", "link": "/collections/pendentifs-medaillons", "image": "shopify://shop_images/gold-mines-offrir.png" } },
+        "c5": { "type": "collection", "settings": { "title": "Toute la joaillerie", "link": "/collections/bague", "image": "shopify://shop_images/gold-mines-atelier.png" } }
+      },
+      "block_order": ["c1", "c2", "c3", "c4", "c5"]
+    },
+    "contact_cards": {
+      "type": "contact-cards",
+      "settings": {
+        "eyebrow": "Contact",
+        "title": "Rencontrons-nous",
+        "image": "shopify://shop_images/gold-mines-hero.png"
+      },
+      "blocks": {
+        "cc3": { "type": "link", "settings": { "label": "Rendez-vous", "title": "Rencontrons-nous", "link": "/pages/rendez-vous", "cta_label": "Réservez" } }
+      },
+      "block_order": ["cc3"]
+    },
     "services": {
       "type": "services",
       "settings": {
@@ -312,13 +346,16 @@
     "hero",
     "signature",
     "universes",
+    "values",
     "selection",
     "bridal",
     "surmesure",
     "craft",
     "stones",
     "story",
+    "collections_signature",
     "services",
+    "contact_cards",
     "press",
     "reviews",
     "newsletter"
