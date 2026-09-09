@@ -278,6 +278,19 @@
         "sv5"
       ]
     },
+    "press": {
+      "type": "press",
+      "settings": {
+        "title": "Vu dans la presse"
+      }
+    },
+    "reviews": {
+      "type": "reviews",
+      "settings": {
+        "eyebrow": "Avis clients",
+        "title": "Ce qu'ils en disent"
+      }
+    },
     "newsletter": {
       "type": "newsletter",
       "settings": {}
@@ -306,6 +319,8 @@
     "stones",
     "story",
     "services",
+    "press",
+    "reviews",
     "newsletter"
   ]
 }

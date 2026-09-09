@@ -430,3 +430,42 @@ a:hover > .frame--zoom > img,
 
 .univ__item, .serv__row, .sel__track > * { min-width: 0; }
 .univ__name, .serv__name, .serv__text { overflow-wrap: anywhere; }
+
+/* ---------- PRESSE -------------------------------------------------------- */
+.press__title { text-align: center; }
+.press__grid {
+  margin-top: var(--s-7);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s-8);
+}
+.press__item { display: block; opacity: .6; transition: opacity var(--d-s) var(--e-out); }
+.press__item:hover { opacity: 1; }
+.press__item img { height: 28px; width: auto; object-fit: contain; filter: grayscale(1); }
+
+/* ---------- AVIS CLIENTS -------------------------------------------------- */
+.reviews__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--s-5);
+}
+.reviews__average { display: flex; align-items: baseline; gap: var(--s-2); }
+.reviews__grid {
+  margin-top: var(--s-8);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--s-6);
+}
+.reviews__card {
+  padding: var(--s-6);
+  background: var(--c-surface);
+  border: 1px solid var(--c-line);
+}
+.reviews__stars { display: flex; gap: 2px; color: var(--c-line); font-size: .9rem; }
+.reviews__star.is-filled { color: var(--c-signature); }
+.reviews__text { margin-top: var(--s-4); color: var(--c-ink); }
+.reviews__author { margin-top: var(--s-5); color: var(--c-ink-soft); }

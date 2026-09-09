@@ -151,6 +151,15 @@
               {{ variant.compare_at_price | money }}
             </span>
           </div>
+          {%- if section.settings.show_installments -%}
+            {%- comment -%}
+              Paiement en plusieurs fois : calcul et éligibilité réels, fournis
+              par Shopify (Shop Pay Installments / Shopify Payments). Le filtre
+              ne rend rien si l'option n'est pas activée sur la boutique ou pas
+              éligible pour ce prix — aucune mensualité n'est recalculée à la main.
+            {%- endcomment -%}
+            <p class="pinfo__installments t-body-s t-muted" data-variant-installments>{{ variant | payment_terms }}</p>
+          {%- endif -%}
         {%- endif -%}
 
         {%- liquid
@@ -572,6 +581,7 @@
     { "type": "text", "id": "request_label", "label": "Bouton quand le prix vaut 0", "default": "Nous consulter" },
     { "type": "url", "id": "request_link", "label": "Lien du bouton", "info": "Affiché à la place de l'ajout au panier tant que le prix n'est pas renseigné." },
     { "type": "checkbox", "id": "show_payment_button", "label": "Bouton « Acheter maintenant »", "default": true, "info": "Bouton de paiement natif Shopify. Il utilise la variante sélectionnée : aucune logique de paiement n'est réécrite." },
+    { "type": "checkbox", "id": "show_installments", "label": "Afficher le paiement en plusieurs fois", "default": true, "info": "N'affiche rien si Shop Pay Installments n'est pas activé ou pas éligible pour ce prix. Montants calculés par Shopify, jamais recalculés à la main." },
     { "type": "text", "id": "appointment_label", "label": "Libellé rendez-vous", "default": "Prendre rendez-vous" },
     { "type": "url", "id": "appointment_link", "label": "Lien rendez-vous" },
     { "type": "text", "id": "advisor_label", "label": "Libellé « poser une question »", "default": "Poser une question" },

@@ -1,0 +1,52 @@
+{%- comment -%}
+  MAISON — Vu dans la presse
+  N'affiche rien tant qu'aucun logo n'est configuré : pas de faux logos,
+  pas de bloc vide visible tant que le client n'a pas de vraie mention presse.
+{%- endcomment -%}
+{%- if section.blocks.size > 0 -%}
+  <section class="section press">
+    <div class="page">
+      {%- if section.settings.title != blank -%}
+        <h2 class="t-h1 line-mask press__title" data-reveal="mask"><span>{{ section.settings.title }}</span></h2>
+      {%- endif -%}
+
+      <div class="press__grid">
+        {%- for block in section.blocks -%}
+          {%- if block.settings.logo != blank -%}
+            {%- if block.settings.link != blank -%}
+              <a class="press__item" href="{{ block.settings.link }}" target="_blank" rel="noopener" {{ block.shopify_attributes }} data-reveal style="--i: {{ forloop.index0 }}">
+                {{ block.settings.logo | image_url: width: 320 | image_tag: loading: 'lazy', sizes: '160px', widths: '160,240,320', alt: block.settings.name }}
+              </a>
+            {%- else -%}
+              <div class="press__item" {{ block.shopify_attributes }} data-reveal style="--i: {{ forloop.index0 }}">
+                {{ block.settings.logo | image_url: width: 320 | image_tag: loading: 'lazy', sizes: '160px', widths: '160,240,320', alt: block.settings.name }}
+              </div>
+            {%- endif -%}
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Vu dans la presse",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Titre", "default": "Vu dans la presse" }
+  ],
+  "blocks": [
+    {
+      "type": "logo",
+      "name": "Logo presse",
+      "settings": [
+        { "type": "image_picker", "id": "logo", "label": "Logo" },
+        { "type": "text", "id": "name", "label": "Nom du média", "info": "Utilisé comme texte alternatif de l'image." },
+        { "type": "url", "id": "link", "label": "Lien vers l'article" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Vu dans la presse" }]
+}
+{% endschema %}
