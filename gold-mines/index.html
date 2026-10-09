@@ -3,248 +3,229 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GOLD MINES — BY ORPAZ · Haute joaillerie, Paris 9ᵉ</title>
-  <meta name="description" content="Maison de joaillerie parisienne, 11 rue Bleue. Créations d'exception, imaginées par vous et réalisées par nos artisans.">
+  <title>GOLD MINES — BY ORPAZ · Haute Joaillerie · Paris</title>
+  <meta name="description" content="Maison de haute joaillerie, 11 rue Bleue, Paris 9ᵉ. Créations d'exception, imaginées par vous et réalisées par nos artisans.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Manrope:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<div class="loader" aria-hidden="true">
+  <div class="loader__mark">GOLD MINES</div>
+  <div class="loader__line"></div>
+</div>
+
 <!-- ═════════ EN-TÊTE ═════════ -->
 <header class="nav" id="nav">
-  <div class="nav__inner">
-    <button class="nav__burger" aria-label="Ouvrir le menu"><span></span><span></span></button>
-    <nav class="nav__links nav__links--left" aria-label="Navigation principale">
-      <a href="#collections">Collections</a>
-      <a href="#signature">Signature</a>
-      <a href="#studio">Studio</a>
-    </nav>
-    <a href="#" class="logo" aria-label="GOLD MINES by Orpaz — accueil">
-      <span class="logo__mark">GOLD MINES</span>
-      <span class="logo__sub">— by Orpaz —</span>
-    </a>
-    <nav class="nav__links nav__links--right" aria-label="Navigation secondaire">
-      <a href="#savoir-faire">Savoir-faire</a>
-      <a href="#maison">La Maison</a>
-      <span class="nav__icons">
-        <button aria-label="Rechercher"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg></button>
-        <button aria-label="Favoris"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></button>
-        <button aria-label="Panier" class="cart"><svg viewBox="0 0 24 24"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg><span class="cart__count">0</span></button>
-      </span>
-    </nav>
+  <button class="nav__menu" aria-label="Menu"><span></span><span></span><em>Menu</em></button>
+  <a href="#" class="logo" aria-label="GOLD MINES by Orpaz">
+    <span class="logo__mark">GOLD MINES</span>
+    <span class="logo__sub">by Orpaz · Paris</span>
+  </a>
+  <div class="nav__right">
+    <a href="#maison" class="nav__rdv">Rendez-vous</a>
+    <button aria-label="Rechercher"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg></button>
+    <button aria-label="Panier" class="cart"><svg viewBox="0 0 24 24"><path d="M5.5 8.5h13l-1 11.5h-11z"/><path d="M9 8.5V7a3 3 0 0 1 6 0v1.5"/></svg><span class="cart__count">0</span></button>
   </div>
 </header>
+
+<nav class="drawer" aria-label="Navigation">
+  <a href="#collections"><span>01</span>Collections</a>
+  <a href="#signature"><span>02</span>Signature</a>
+  <a href="#savoir-faire"><span>03</span>Savoir-faire</a>
+  <a href="#studio"><span>04</span>Créer mon bijou</a>
+  <a href="#maison"><span>05</span>La Maison</a>
+</nav>
 
 <main>
 
 <!-- ═════════ HERO ═════════ -->
-<section class="hero" id="top">
-  <div class="hero__grid" aria-hidden="true"></div>
-  <div class="hero__copy">
-    <p class="eyebrow reveal">Maison de joaillerie · 11 rue Bleue · Paris 9ᵉ</p>
+<section class="hero">
+  <div class="hero__media"><img src="img/hero.jpg" alt="Solitaire diamant sur or jaune 18 carats" fetchpriority="high"></div>
+  <div class="hero__veil"></div>
+  <div class="hero__content">
+    <p class="kicker">Haute Joaillerie · Paris</p>
     <h1 class="hero__title">
-      <span class="line"><span>L'art de la</span></span>
-      <span class="line"><span><em>joaillerie,</em></span></span>
-      <span class="line"><span>réinventé.</span></span>
+      <span class="ln"><span>L'art de la joaillerie,</span></span>
+      <span class="ln"><span><em>réinventé.</em></span></span>
     </h1>
-    <p class="hero__lead reveal">Des créations d'exception, imaginées par vous et réalisées par nos artisans.</p>
-    <div class="hero__ctas reveal">
-      <a href="#collections" class="btn btn--primary">Découvrir nos collections</a>
-      <a href="#studio" class="btn btn--ghost">Créer mon bijou <span class="btn__arrow">→</span></a>
+    <p class="hero__lead">Des créations d'exception, imaginées par vous<br>et réalisées par nos artisans.</p>
+    <div class="hero__ctas">
+      <a href="#collections" class="btn btn--light">Découvrir nos collections</a>
+      <a href="#studio" class="btn btn--text">Créer mon bijou</a>
     </div>
   </div>
-
-  <div class="hero__art" aria-hidden="true">
-    <div class="sheet">
-      <div class="sheet__head">
-        <span>PLANCHE Nº 001</span><span>SOLITAIRE « RUE BLEUE »</span><span>ÉCH. 4:1</span>
-      </div>
-      <div class="sheet__drawing" data-ring data-metal="jaune" data-stone="diamant" data-sketch="true"></div>
-      <div class="note note--a"><i></i>Diamant taille brillant · 1,02 ct · D / VVS1</div>
-      <div class="note note--b"><i></i><span>Griffes ×6<br>Or jaune 18 ct</span></div>
-      <div class="note note--c"><i></i>Ø int. 17,2 mm · T.54</div>
-      <div class="sheet__foot"><span>Dessiné à Paris</span><span class="sig">Orpaz</span></div>
-    </div>
+  <div class="hero__foot">
+    <span>11 rue Bleue — Paris 9ᵉ</span>
+    <span class="hero__scroll"><i></i>Défiler</span>
+    <span>Créé dans notre atelier</span>
   </div>
+</section>
 
-  <a href="#collections" class="scroll-cue" aria-label="Défiler vers les collections"><span></span>Défiler</a>
+<!-- ═════════ MANIFESTE ═════════ -->
+<section class="manifesto">
+  <p class="kicker kicker--gold">La Maison</p>
+  <p class="manifesto__text" id="manifesto">Nous ne vendons pas des bijoux. Nous révélons la lumière que chaque pierre attendait, et nous la façonnons à votre image, à la main, au cœur de Paris.</p>
+  <div class="manifesto__sig"><span class="rule"></span>Orpaz, fondateur</div>
 </section>
 
 <!-- ═════════ COLLECTIONS ═════════ -->
-<section class="section collections" id="collections">
-  <div class="section__head">
-    <p class="eyebrow">I — Les Collections</p>
-    <h2 class="h2 reveal">Chaque pièce commence<br>par un <em>trait d'encre.</em></h2>
-    <a class="link" href="#">Tout voir <span>→</span></a>
+<section class="collections" id="collections">
+  <div class="collections__head">
+    <p class="kicker kicker--gold">Les Collections</p>
+    <h2 class="title">Pièces <em>d'exception</em></h2>
   </div>
-  <div class="cards" id="cards"></div>
+
+  <div class="mosaic">
+    <a href="#" class="tile tile--tall reveal">
+      <div class="tile__img"><img src="img/necklace.jpg" alt="Collier rivière de diamants et saphir poire" loading="lazy"></div>
+      <div class="tile__cap"><span>01</span><h3>Colliers</h3><p>Rivières, sautoirs, pendentifs</p></div>
+    </a>
+    <a href="#" class="tile reveal" style="--d:.12s">
+      <div class="tile__img"><img src="img/earrings.jpg" alt="Boucles d'oreilles poire diamants sur or rose" loading="lazy"></div>
+      <div class="tile__cap"><span>02</span><h3>Boucles d'oreilles</h3><p>Dormeuses, pendants, créoles</p></div>
+    </a>
+    <a href="#" class="tile reveal" style="--d:.24s">
+      <div class="tile__img"><img src="img/ring-b.jpg" alt="Bague solitaire diamant" loading="lazy" style="object-position:72% 50%"></div>
+      <div class="tile__cap"><span>03</span><h3>Bagues</h3><p>Solitaires, alliances, cocktail</p></div>
+    </a>
+  </div>
+
+  <ul class="catlist" id="catlist">
+    <li data-img="img/ring-c.jpg"><a href="#"><span class="n">04</span><span class="t">Bracelets</span><span class="d">Joncs, rivières, manchettes</span><span class="a">→</span></a></li>
+    <li data-img="img/necklace-b.jpg"><a href="#"><span class="n">05</span><span class="t">Pendentifs</span><span class="d">Médailles, gouttes, symboles</span><span class="a">→</span></a></li>
+    <li data-img="img/hero.jpg"><a href="#"><span class="n">06</span><span class="t">Diamants</span><span class="d">Certifiés GIA, sélectionnés à la loupe</span><span class="a">→</span></a></li>
+    <li data-img="img/necklace.jpg"><a href="#"><span class="n">07</span><span class="t">Pierres précieuses</span><span class="d">Saphirs, rubis, émeraudes</span><span class="a">→</span></a></li>
+    <li data-img="img/ring-d.jpg"><a href="#"><span class="n">08</span><span class="t">Joaillerie masculine</span><span class="d">Chevalières, gourmettes</span><span class="a">→</span></a></li>
+    <li data-img="img/earrings-b.jpg"><a href="#"><span class="n">09</span><span class="t">Sur mesure</span><span class="d">Votre pièce, unique au monde</span><span class="a">→</span></a></li>
+  </ul>
+  <div class="catlist__preview" aria-hidden="true"><img alt=""></div>
 </section>
 
-<!-- ═════════ SIGNATURE (salon privé) ═════════ -->
+<!-- ═════════ SIGNATURE ═════════ -->
 <section class="signature" id="signature">
-  <div class="signature__glow" aria-hidden="true"></div>
-  <div class="signature__inner">
-    <div class="signature__stage">
-      <div class="stage" data-ring data-metal="jaune" data-stone="diamant" id="sigRing"></div>
-      <div class="stage__floor" aria-hidden="true"></div>
-      <p class="stage__hint">Bougez pour faire jouer la lumière</p>
-    </div>
-    <div class="signature__panel">
-      <p class="eyebrow eyebrow--gold">II — Collection Signature</p>
-      <h2 class="h2 h2--light reveal">Solitaire<br><em>Rue Bleue</em></h2>
-      <p class="muted">Un diamant taille brillant tenu par six griffes effilées, monté sur un anneau sculpté à la main dans notre atelier parisien.</p>
-
-      <div class="opt">
-        <p class="opt__label">Métal <span id="metalName">Or jaune 18 ct</span></p>
-        <div class="swatches" data-group="metal">
-          <button class="sw sw--jaune is-on" data-v="jaune" aria-label="Or jaune 18 ct"></button>
-          <button class="sw sw--blanc" data-v="blanc" aria-label="Or blanc 18 ct"></button>
-          <button class="sw sw--rose" data-v="rose" aria-label="Or rose 18 ct"></button>
-          <button class="sw sw--platine" data-v="platine" aria-label="Platine"></button>
-        </div>
-      </div>
-      <div class="opt">
-        <p class="opt__label">Pierre <span id="stoneName">Diamant</span></p>
-        <div class="chips" data-group="stone">
-          <button class="chip is-on" data-v="diamant">Diamant</button>
-          <button class="chip" data-v="saphir">Saphir</button>
-          <button class="chip" data-v="rubis">Rubis</button>
-          <button class="chip" data-v="emeraude">Émeraude</button>
-        </div>
-      </div>
-      <div class="opt">
-        <p class="opt__label">Carats</p>
-        <div class="chips" data-group="carat">
-          <button class="chip" data-v="0.5">0,50</button>
-          <button class="chip is-on" data-v="1">1,00</button>
-          <button class="chip" data-v="1.5">1,50</button>
-          <button class="chip" data-v="2">2,00</button>
-        </div>
-      </div>
-
-      <div class="buy">
-        <div>
-          <p class="price" id="price">8 900 €</p>
-          <p class="tiny">Fabrication à Paris · 4 à 6 semaines · Certificat inclus</p>
-        </div>
-        <div class="buy__btns">
-          <button class="btn btn--gold" id="addCart">Ajouter au panier</button>
-          <a href="#studio" class="btn btn--line">Personnaliser</a>
-        </div>
-      </div>
-    </div>
+  <div class="signature__media reveal" id="sigMedia">
+    <img src="img/ring-d.jpg" alt="Solitaire Rue Bleue" loading="lazy" id="sigImg" style="object-position:80% 50%">
+    <span class="zoom-hint">Survolez pour zoomer</span>
   </div>
-  <p class="signature__quote reveal">Chaque détail raconte une histoire.</p>
+  <div class="signature__panel">
+    <p class="kicker kicker--gold">Collection Signature</p>
+    <h2 class="title title--sm">Solitaire<br><em>Rue Bleue</em></h2>
+    <p class="body">Un diamant taille brillant tenu par six griffes effilées, sur un anneau façonné à la main dans notre atelier parisien.</p>
+
+    <div class="opt">
+      <div class="opt__head"><span>Métal</span><b id="metalName">Or jaune 18 ct</b></div>
+      <div class="opt__row" data-group="metal">
+        <button class="sw sw--jaune is-on" data-v="jaune" aria-label="Or jaune 18 ct"></button>
+        <button class="sw sw--blanc" data-v="blanc" aria-label="Or blanc 18 ct"></button>
+        <button class="sw sw--rose" data-v="rose" aria-label="Or rose 18 ct"></button>
+        <button class="sw sw--platine" data-v="platine" aria-label="Platine 950"></button>
+      </div>
+    </div>
+    <div class="opt">
+      <div class="opt__head"><span>Carats</span><b id="caratName">1,00 ct</b></div>
+      <div class="opt__row" data-group="carat">
+        <button class="pill" data-v="0.5">0,50</button>
+        <button class="pill is-on" data-v="1">1,00</button>
+        <button class="pill" data-v="1.5">1,50</button>
+        <button class="pill" data-v="2">2,00</button>
+      </div>
+    </div>
+    <div class="opt">
+      <div class="opt__head"><span>Tour de doigt</span><a href="#" class="guide">Guide des tailles</a></div>
+      <select class="select" aria-label="Tour de doigt">
+        <option>48</option><option>50</option><option>52</option><option selected>54</option><option>56</option><option>58</option>
+      </select>
+    </div>
+
+    <div class="price">
+      <span id="price">8 900 €</span>
+      <small>Réalisé à Paris en 4 à 6 semaines · Certificat & garantie à vie</small>
+    </div>
+    <div class="actions">
+      <button class="btn btn--gold" id="addCart">Ajouter au panier</button>
+      <a href="#studio" class="btn btn--line">Personnaliser</a>
+    </div>
+    <ul class="reassure">
+      <li>Livraison sécurisée offerte</li><li>Paiement en 3× sans frais</li><li>Essayage en boutique</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═════════ CITATION ═════════ -->
+<section class="quote">
+  <div class="quote__media"><img src="img/earrings-b.jpg" alt="" loading="lazy" style="object-position:62% 50%"></div>
+  <p class="quote__text">Chaque détail<br><em>raconte une histoire.</em></p>
 </section>
 
 <!-- ═════════ SAVOIR-FAIRE ═════════ -->
-<section class="section craft" id="savoir-faire">
-  <div class="section__head">
-    <p class="eyebrow">III — Le Savoir-faire</p>
-    <h2 class="h2 reveal">Du croquis à l'écrin,<br><em>six gestes.</em></h2>
+<section class="craft" id="savoir-faire">
+  <div class="craft__head">
+    <p class="kicker kicker--gold">Le Savoir-faire</p>
+    <h2 class="title title--light">Six gestes,<br><em>une seule exigence.</em></h2>
   </div>
-  <div class="thread" aria-hidden="true"><svg viewBox="0 0 1200 40" preserveAspectRatio="none"><path id="threadPath" d="M0 20 C 150 0, 250 40, 400 20 S 650 0, 800 20 S 1050 40, 1200 20"/></svg></div>
-  <ol class="steps">
-    <li class="step reveal"><span class="step__n">01</span><h3>Imagination</h3><p>Votre idée, vos souvenirs, vos envies — écoutés en atelier ou en ligne.</p></li>
-    <li class="step reveal"><span class="step__n">02</span><h3>Dessin &amp; 3D</h3><p>Gouaché à la main, puis modélisé au centième de millimètre.</p></li>
-    <li class="step reveal"><span class="step__n">03</span><h3>Fabrication</h3><p>Fonte et façonnage de l'or par nos artisans, rue Bleue.</p></li>
-    <li class="step reveal"><span class="step__n">04</span><h3>Sertissage</h3><p>Chaque pierre est tenue à la loupe, griffe après griffe.</p></li>
-    <li class="step reveal"><span class="step__n">05</span><h3>Polissage</h3><p>Finitions miroir, satinées ou martelées selon votre choix.</p></li>
-    <li class="step reveal"><span class="step__n">06</span><h3>Livraison</h3><p>Écrin, certificat et garantie, remis en main propre ou livrés.</p></li>
+  <ol class="craft__steps">
+    <li class="reveal"><span>I</span><h3>Imagination</h3><p>Votre histoire, vos envies, écoutées en tête-à-tête.</p></li>
+    <li class="reveal" style="--d:.08s"><span>II</span><h3>Dessin & 3D</h3><p>Gouaché à la main, modélisé au centième de millimètre.</p></li>
+    <li class="reveal" style="--d:.16s"><span>III</span><h3>Fabrication</h3><p>L'or est fondu et façonné rue Bleue.</p></li>
+    <li class="reveal" style="--d:.24s"><span>IV</span><h3>Sertissage</h3><p>Chaque pierre posée sous la loupe, griffe après griffe.</p></li>
+    <li class="reveal" style="--d:.32s"><span>V</span><h3>Polissage</h3><p>Finition miroir, satinée ou martelée.</p></li>
+    <li class="reveal" style="--d:.40s"><span>VI</span><h3>Remise</h3><p>Écrin, certificat et garantie, remis en main propre.</p></li>
   </ol>
 </section>
 
 <!-- ═════════ STUDIO ═════════ -->
 <section class="studio" id="studio">
-  <div class="studio__inner">
-    <div class="studio__copy">
-      <p class="eyebrow eyebrow--orange">IV — Gold Mines Studio</p>
-      <h2 class="h2 h2--light reveal">Devenez le créateur<br>de <em>votre bijou.</em></h2>
-      <p class="muted">Choisissez la forme, le métal, la pierre et la gravure. Le plan technique et le rendu évoluent sous vos yeux, puis votre fiche de création part directement à l'atelier pour un devis.</p>
-      <ul class="studio__list">
-        <li><span>01</span>Type de bijou</li>
-        <li><span>02</span>Métal</li>
-        <li><span>03</span>Pierre &amp; forme</li>
-        <li><span>04</span>Gravure &amp; détails</li>
-        <li><span>05</span>Visualisation 360° &amp; devis</li>
-      </ul>
-      <a href="#" class="btn btn--orange">Ouvrir le Studio <span class="btn__arrow">→</span></a>
+  <div class="studio__media"><img src="img/ring-c.jpg" alt="" loading="lazy"></div>
+  <div class="studio__veil"></div>
+  <div class="studio__content">
+    <p class="kicker kicker--orange">Gold Mines Studio</p>
+    <h2 class="title title--light">Devenez le créateur<br><em>de votre bijou.</em></h2>
+    <p class="body body--light">Choisissez la forme, le métal, la pierre, la gravure. Visualisez votre création, puis envoyez-la à notre atelier : un joaillier vous répond avec un devis personnalisé.</p>
+    <div class="studio__steps">
+      <span>Bijou</span><i></i><span>Métal</span><i></i><span>Pierre</span><i></i><span>Forme</span><i></i><span>Gravure</span><i></i><span>Devis</span>
     </div>
-    <div class="studio__table">
-      <div class="table">
-        <div class="table__bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="table__title">Ma création · brouillon enregistré</span></div>
-        <div class="table__body">
-          <div class="table__view">
-            <div class="blueprint" data-ring data-metal="rose" data-stone="saphir" data-sketch="true" data-overlay="true" id="studioRing"></div>
-            <span class="engr" id="engrPreview">À jamais · 12.06.2026</span>
-          </div>
-          <div class="table__side">
-            <label class="field">
-              <span>Forme de la pierre</span>
-              <div class="shapes">
-                <button class="shape is-on" title="Ronde"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/></svg></button>
-                <button class="shape" title="Ovale"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="6" ry="9"/></svg></button>
-                <button class="shape" title="Poire"><svg viewBox="0 0 24 24"><path d="M12 3c3 4 6 7.5 6 11a6 6 0 0 1-12 0c0-3.5 3-7 6-11z"/></svg></button>
-                <button class="shape" title="Princesse"><svg viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14"/></svg></button>
-                <button class="shape" title="Cœur"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></button>
-              </div>
-            </label>
-            <label class="field">
-              <span>Épaisseur de l'anneau <b id="bandVal">2,2 mm</b></span>
-              <input type="range" min="1.6" max="3.2" step="0.1" value="2.2" id="band">
-            </label>
-            <label class="field">
-              <span>Gravure</span>
-              <input type="text" maxlength="24" value="À jamais · 12.06.2026" id="engr">
-            </label>
-            <div class="field field--row">
-              <span>Estimation</span><b class="est">à partir de 3 400 €</b>
-            </div>
-            <p class="tiny tiny--dim">Rendu indicatif. Faisabilité et prix définitif validés par l'atelier.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <a href="#" class="btn btn--gold">Commencer ma création</a>
   </div>
 </section>
 
 <!-- ═════════ LA MAISON ═════════ -->
-<section class="section maison" id="maison">
-  <div class="maison__grid">
-    <div class="maison__card">
-      <p class="eyebrow">V — La Maison</p>
-      <h2 class="h2 reveal">11 rue Bleue,<br><em>Paris 9ᵉ.</em></h2>
-      <p>Notre boutique et notre atelier ne font qu'un. On y dessine, on y fond l'or, on y sertit — et on vous y reçoit sur rendez-vous, pour une création, une transformation ou un conseil.</p>
-      <a href="#" class="btn btn--primary">Prendre rendez-vous</a>
-    </div>
-    <ul class="services">
-      <li><h3>Création sur mesure</h3><p>De l'idée au bijou unique.</p><span>→</span></li>
-      <li><h3>Transformation</h3><p>Donnez une seconde vie à vos bijoux anciens.</p><span>→</span></li>
-      <li><h3>Réparation &amp; entretien</h3><p>Remise en état, mise à taille, polissage.</p><span>→</span></li>
-      <li><h3>Achat &amp; vente d'or</h3><p>Estimation transparente, en boutique.</p><span>→</span></li>
-      <li><h3>Diamants certifiés</h3><p>Une sélection GIA / HRD commentée en atelier.</p><span>→</span></li>
-    </ul>
+<section class="maison" id="maison">
+  <div class="maison__left">
+    <p class="kicker kicker--gold">La Boutique & l'Atelier</p>
+    <h2 class="title">11 rue Bleue<br><em>Paris 9ᵉ</em></h2>
+    <p class="body">Notre boutique et notre atelier ne font qu'un. Nous vous recevons sur rendez-vous, dans un salon privé, pour une création, une transformation ou un simple conseil.</p>
+    <a href="#" class="btn btn--dark">Réserver un rendez-vous</a>
   </div>
+  <ul class="services">
+    <li><span>Création sur mesure</span><i>→</i></li>
+    <li><span>Transformation de bijoux anciens</span><i>→</i></li>
+    <li><span>Réparation & entretien</span><i>→</i></li>
+    <li><span>Achat & vente d'or</span><i>→</i></li>
+    <li><span>Diamants certifiés</span><i>→</i></li>
+  </ul>
 </section>
 
 </main>
 
-<!-- ═════════ PIED DE PAGE ═════════ -->
 <footer class="footer">
   <div class="footer__top">
-    <div class="logo logo--light"><span class="logo__mark">GOLD MINES</span><span class="logo__sub">— by Orpaz —</span></div>
+    <div class="footer__brand">
+      <span class="logo__mark">GOLD MINES</span>
+      <span class="logo__sub">by Orpaz · Paris</span>
+    </div>
     <form class="newsletter" onsubmit="event.preventDefault()">
-      <label for="nl">Recevoir les nouvelles créations</label>
-      <div><input id="nl" type="email" placeholder="Votre adresse e-mail"><button class="btn btn--gold">S'inscrire</button></div>
+      <label for="nl">Recevoir nos nouvelles créations</label>
+      <div><input id="nl" type="email" placeholder="Adresse e-mail"><button>S'inscrire</button></div>
     </form>
   </div>
   <div class="footer__cols">
     <div><h4>Collections</h4><a href="#">Bagues</a><a href="#">Colliers</a><a href="#">Bracelets</a><a href="#">Boucles d'oreilles</a></div>
     <div><h4>Services</h4><a href="#">Sur mesure</a><a href="#">Transformation</a><a href="#">Réparation</a><a href="#">Achat d'or</a></div>
-    <div><h4>Client</h4><a href="#">Mon espace</a><a href="#">Suivi de commande</a><a href="#">Garanties &amp; certificats</a><a href="#">Livraison</a></div>
-    <div><h4>Boutique</h4><p>11 rue Bleue<br>75009 Paris</p><p>Mar – Sam · 10h – 19h<br>Sur rendez-vous</p></div>
+    <div><h4>Client</h4><a href="#">Mon espace</a><a href="#">Suivi de commande</a><a href="#">Garanties & certificats</a></div>
+    <div><h4>Boutique</h4><p>11 rue Bleue, 75009 Paris<br>Mardi – Samedi · 10h – 19h</p></div>
   </div>
   <div class="footer__bottom"><span>© 2026 Gold Mines by Orpaz</span><span>Mentions légales · Confidentialité · CGV</span></div>
 </footer>
